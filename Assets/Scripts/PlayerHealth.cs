@@ -2,22 +2,24 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int lives = 3; // Starting lives
-    public Transform respawnPoint; // Set this to the starting position of the player
-    public GameObject player; // Assign the player GameObject
+    //starting life, starting position
+    public int lives = 3;
+    public Transform respawnPoint; 
+    public GameObject player; 
 
     public void TakeDamage()
     {
         lives--;
         if (lives > 0)
         {
-            // Respawn player
+            // respawn
             player.transform.position = respawnPoint.position;
         }
         else
         {
-            // Trigger Game Over
-            FindObjectOfType<GameManager>().GameOver();
+            // game over!
+            //FindObjectOfType<GameManager>().GameOver();
+            Debug.Log("Game Over! Lives depleted.");
         }
     }
 }
