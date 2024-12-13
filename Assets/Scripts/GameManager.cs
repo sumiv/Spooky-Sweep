@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     //track total items 
-    public int totalItems = 15;
+    public int totalItems = 33;
     private int itemsCollected = 0;
     public void Awake()
     {
@@ -34,10 +34,4 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("YouWinScene");
     }
-
-    public void LoadTitleScreen()
-    {
-        SceneManager.LoadScene("TitleScene");
-    }
-
 }

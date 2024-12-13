@@ -7,4 +7,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("MainScene");
     }
+
+    public void LoadTitleScreen()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
 }
