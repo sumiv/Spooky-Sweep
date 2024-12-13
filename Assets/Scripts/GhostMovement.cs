@@ -5,7 +5,7 @@ using UnityEngine;
 public class GhostMovement : MonoBehaviour
 {
     public Pathfinding pathfinding;
-    public GridManager gridManager; // Reference to GridManager
+    public GridManager gridManager;
     public float speed = 2.0f;
 
     private List<Node> path;

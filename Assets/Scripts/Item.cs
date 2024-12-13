@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public int points = 1;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // Add score or power-up effect here
+            FindObjectOfType<ScoreManager>().AddScore(points);
             Destroy(gameObject);
         }
     }
