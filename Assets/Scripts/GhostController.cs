@@ -20,11 +20,11 @@ public class GhostController : MonoBehaviour
         transform.position += direction * speed * Time.deltaTime;
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        collision.gameObject.GetComponent<PlayerHealth>().TakeDamage();
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage();
+        }
+    }
 }

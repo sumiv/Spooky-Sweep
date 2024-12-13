@@ -9,7 +9,23 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
-        scoreText.text = "Score: " + score;
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score;
+        }
+        else
+        {
+            Debug.LogError("ScoreText is not assigned in the ScoreManager script.");
+        }
+    }
+
+    public void ResetScore()
+    {
+        score = 0;
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: 0";
+        }
     }
 
     public int GetScore()
